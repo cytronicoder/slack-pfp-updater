@@ -15,7 +15,7 @@ async function getRandomImage() {
 
   let photo = photos[Math.floor(Math.random() * photos.length)];
   // Construct the URL for the image file
-  const photoURL = `https://profile-pics.cytronicoder.com/${photo}`;
+  const photoURL = `https://profile-pics.cytronicoder.com/images/${photo}`;
   const image = await axios.get(photoURL, {
     responseType: "arraybuffer",
   });

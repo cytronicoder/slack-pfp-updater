@@ -35,13 +35,14 @@ async function getRandomImage() {
  *
  * @return {Promise} A Promise that resolves once the profile picture is set.
  */
-export default async (req, res) => {
+const handler = async (req, res) => {
   const image = await getRandomImage();
   const client = new WebClient();
   await client.users.setPhoto({
     image: image,
     token: process.env.SLACK_TOKEN,
   });
-  // res.send("Profile picture updated!");
-  res.redirect("https://profile-pic.cytronicoder.com/");
+  res.redirect("/");
 };
+
+export default handler;

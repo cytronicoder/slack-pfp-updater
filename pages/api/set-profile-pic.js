@@ -8,6 +8,9 @@ const path = require("node:path");
 const S1 = require("s1db");
 const db = new S1(process.env.S1_TOKEN);
 
+const token = process.env.SLACK_TOKEN;
+const client = new WebClient(token);
+
 /**
  * Fetches a random image from the given URL.
  *
@@ -37,10 +40,8 @@ async function getRandomImage() {
  */
 const handler = async (req, res) => {
   const image = await getRandomImage();
-  const client = new WebClient();
   await client.users.setPhoto({
     image: image,
-    token: process.env.SLACK_TOKEN,
   });
   res.redirect("/");
 };

@@ -10,22 +10,13 @@ const path = require("node:path");
  * @return {Promise} A Promise that resolves with the image data as an array buffer.
  */
 async function getRandomImage() {
-  const serverPath = path.dirname(require.main.filename);
-  const publicPath = path.resolve(serverPath, "..", "..", "public");
+  const imagesDirectory = path.join(process.cwd(), "public", "images");
+  let photos = fs.readdirSync(imagesDirectory);
 
-  // Check if the directory exists
-  if (!fs.existsSync(publicPath)) {
-    throw new Error(`Directory not found: ${publicPath}`);
-  }
-
-  const files = fs.readdirSync(publicPath);
-  const imageFiles = files.filter((file) => file.endsWith(".jpg"));
-  const randomImageFile =
-    imageFiles[Math.floor(Math.random() * imageFiles.length)];
-
+  let photo = photos[Math.floor(Math.random() * photos.length)];
   // Construct the URL for the image file
-  const imageUrl = `https://profile-pics.cytronicoder.com/${randomImageFile}`;
-  const image = await axios.get(imageUrl, {
+  const photoURL = `https://profile-pics.cytronicoder.com/${photo}`;
+  const image = await axios.get(photoURL, {
     responseType: "arraybuffer",
   });
 

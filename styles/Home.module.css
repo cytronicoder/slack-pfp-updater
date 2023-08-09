@@ -1,0 +1,24 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--colors-text);
+}
+
+.avatar {
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}

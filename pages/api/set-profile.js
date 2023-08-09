@@ -1,8 +1,12 @@
 require("dotenv").config();
 const { WebClient } = require("@slack/web-api");
 const axios = require("axios").default;
+
 const fs = require("node:fs");
 const path = require("node:path");
+
+const S1 = require("s1db");
+const db = new S1(process.env.S1_TOKEN);
 
 /**
  * Fetches a random image from the given URL.
@@ -20,6 +24,9 @@ async function getRandomImage() {
     responseType: "arraybuffer",
   });
 
+  // Save the URL to the database
+  await db.set("image", photoURL);
+
   return image.data;
 }
 
@@ -35,6 +42,6 @@ export default async (req, res) => {
     image: image,
     token: process.env.SLACK_TOKEN,
   });
-  res.send("Profile picture updated!");
-  //   res.redirect("https://profile-pic.cytronicoder.com/");
+  // res.send("Profile picture updated!");
+  res.redirect("https://profile-pic.cytronicoder.com/");
 };

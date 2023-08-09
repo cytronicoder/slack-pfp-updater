@@ -20,6 +20,9 @@ dependencies:
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  s1db:
+    specifier: ^0.0.3
+    version: 0.0.3
 
 devDependencies:
   dotenv:
@@ -272,6 +275,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /isomorphic-unfetch@3.1.0:
+    resolution: {integrity: sha512-geDJjpoZ8N0kWexiwkX8F9NkTsXhetLPVbZFQ+JTW239QNOwvB0gniuR1Wc6f0AMTn7/mFGyXvHTifrCp/GH8Q==}
+    dependencies:
+      node-fetch: 2.6.12
+      unfetch: 4.2.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: false
@@ -341,6 +353,18 @@ packages:
       - babel-plugin-macros
     dev: false
 
+  /node-fetch@2.6.12:
+    resolution: {integrity: sha512-C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
+
   /p-finally@1.0.0:
     resolution: {integrity: sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==}
     engines: {node: '>=4'}
@@ -408,6 +432,14 @@ packages:
     engines: {node: '>= 4'}
     dev: false
 
+  /s1db@0.0.3:
+    resolution: {integrity: sha512-Dl0mCuLJPgGH5PQu2Na/hBeIqDgz94yL4rW6f0eTQVLp2PDOmPDkEv5MC5b06Zay0q429/kulXAjh8bJ5m8kxA==}
+    dependencies:
+      isomorphic-unfetch: 3.1.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
@@ -441,8 +473,16 @@ packages:
       react: 18.2.0
     dev: false
 
+  /tr46@0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+    dev: false
+
   /tslib@2.6.1:
     resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
+    dev: false
+
+  /unfetch@4.2.0:
+    resolution: {integrity: sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==}
     dev: false
 
   /watchpack@2.4.0:
@@ -451,6 +491,17 @@ packages:
     dependencies:
       glob-to-regexp: 0.4.1
       graceful-fs: 4.2.11
+    dev: false
+
+  /webidl-conversions@3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+    dev: false
+
+  /whatwg-url@5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
     dev: false
 
   /zod@3.21.4:

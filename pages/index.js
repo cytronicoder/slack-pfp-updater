@@ -6,7 +6,7 @@ export default function Home() {
       <main className={styles.main}>
         <img src="/api/current/" className={styles.avatar} />
         <div className={styles.grid}>
-          <a href={"/api/set-profile"} className={styles.card}>
+          <a href={"/api/set-profile-pic"} className={styles.card}>
             <h3>Change the avatar &rarr;</h3>
             <p>Changes on the Hack Club Slack. Have fun!</p>
           </a>

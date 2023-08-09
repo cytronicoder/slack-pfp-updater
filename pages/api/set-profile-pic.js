@@ -14,12 +14,12 @@ const db = new S1(process.env.S1_TOKEN);
  * @return {Promise} A Promise that resolves with the image data as an array buffer.
  */
 async function getRandomImage() {
-  const imagesDirectory = path.join(process.cwd(), "public", "images");
+  const imagesDirectory = path.join(process.cwd(), "public", "pics");
   let photos = fs.readdirSync(imagesDirectory);
 
   let photo = photos[Math.floor(Math.random() * photos.length)];
   // Construct the URL for the image file
-  const photoURL = `https://slack.cytronicoder.com/images/${photo}`;
+  const photoURL = `https://slack.cytronicoder.com/pics/${photo}`;
   const image = await axios.get(photoURL, {
     responseType: "arraybuffer",
   });

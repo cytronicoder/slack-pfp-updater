@@ -6,7 +6,7 @@ export default async (req, res) => {
   let image = await db.get("image");
 
   if (!image) {
-    image = "https://slack.cytronicoder.com/default.jpg";
+    image = "https://slack.cytronicoder.com/pics/default.jpg";
   }
 
   res.redirect(image);

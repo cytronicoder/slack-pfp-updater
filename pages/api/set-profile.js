@@ -42,7 +42,7 @@ const handler = async (req, res) => {
     image: image,
     token: process.env.SLACK_TOKEN,
   });
-  res.redirect("/");
+  res.status(200).redirect("/");
 };
 
 export default handler;

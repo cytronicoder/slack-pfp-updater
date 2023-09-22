@@ -10,4 +10,5 @@ export default async (req, res) => {
   }
 
   res.redirect(image);
+  return image;
 };

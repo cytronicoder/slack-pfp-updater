@@ -47,8 +47,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #ec3750;
-  border-color: #ec3750;
+  color: #a633d6;
+  border-color: #a633d6;
 }
 
 .card h3 {
@@ -71,7 +71,7 @@
 .underline_on_hover {
   display: inline-block;
   position: relative;
-  color: #ec3750;
+  color: #a633d6;
   cursor: pointer;
 }
 
@@ -83,7 +83,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ec3750;
+  background-color: #a633d6;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

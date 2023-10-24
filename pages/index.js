@@ -49,9 +49,9 @@ export default function Home() {
           <span className={styles.underline_on_hover}>Peter.</span>
         </h1>
         <div className={styles.grid}>
-          <a href={"/api/set-profile-pic/"} className={styles.card}>
-            <h3>Change my avatar &rarr;</h3>
-            <p>Changes on the Hack Club Slack. Have fun!</p>
+          <a href={"/api/current-profile-pic/"} className={styles.card}>
+            <h3>Fetch my avatar &rarr;</h3>
+            <p>No idea why you want to have this... but here you go.</p>
           </a>
           <a href={"https://cytronicoder.com/"} className={styles.card}>
             <h3>Visit my portfolio &rarr;</h3>
